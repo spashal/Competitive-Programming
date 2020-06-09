@@ -1,0 +1,32 @@
+Date of contest : 07/06/2020                     Div. 2
+Date of blog: The next day
+
+Target:
+	1).Solve A within 5mins.
+	2).Solve atleast till the 1500 pts(A-D).
+	3).Reach Expert
+
+Targets achieved:
+Only the second one.
+Missed the last one by a whisker(3pts).
+
+Q1. Not as easy as some of the other As but I managed to knock it with confidence but took some time for that.
+
+Q2. I misread the question first and wasted 10mins for wrong code and also the sweet time for thinking a new and mathematically sound algo(which is after having submitted the prev question). Therefore I somehow did something and passed the sample tests to waste 2 attempts. Finally left it and did it at the end. Cost me atleast 200 points along.
+
+Q3. I don't even remember the question which means that this question should have been easy and I did it in 15 mins.
+
+Q4. I ran into TLE thrice before I eventually succeeded in saving some time by remembering
+all the good people who had earlier reached the destination and our work was to solely
+reach some place from where someone had earlier escaped.
+
+Instead of running dfs for each good person, which squared the time complexity, I could've
+just run a dfs from the destination to know which places were accessible. Thanks to the constraints
+that I could pass with little optimization. Nevermind. It took me not much to come up with a solution
+but TLE and heavier coding cost me atleast 200-250 points and I could've reached expert rn :(
+
+Q5. Didn't believe I could solve it within 20 mins but to be honest, with cool thinking and some basic binary operations knowledge, this question could have been solved with the given time. I want to reach this state of calm thinking to able to get the best out.
+
+I have not yet been able to figure out whether I am going through a purple patch or I have seriously reached Expert levels. Who knows I deserve better. I can't do anything except remain passionate and keep on working hard.
+
+PS: To me, the difficulty of B is same as A or even less. Similarly, E seems easier than D :)

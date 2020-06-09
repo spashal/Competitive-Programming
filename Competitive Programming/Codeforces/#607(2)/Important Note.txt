@@ -1,0 +1,3 @@
+Please note that the ques. no. 2 had a very tricky test case of iwwwwwwwuuuuuuuux
+iuwwwwwwwuuuuuuux
+I mean it was tricky for me that time when I had thought of the solution. I could only come up with the submitted code because of a small modification based on this test case. Note that such cases could be tough to think of during the contests so we need to really be careful and keep on thinking over such cases. I think eventually I will be able to figure out how to find such test cases.
