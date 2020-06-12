@@ -1,0 +1,27 @@
+myProjectIdeas.txt
+
+1. Chatbot for first-time users. It would be better if I am able to identify who is visiting for the first time and suggest them to attempt this bot.
+
+2. Design has to be dynamic cause I want to see my website evolving and featuring new web-apps that I will build.
+
+3. Scrolling looks the most used browsing method within the website. I would like to have the slide in or some other kind of appearance for things( like we see in apple or oneplus websites).
+
+4. For new things that I make, I may want to have simple feedback mechanisms that make them feel like they're rating as in a social website(they like it, they get it and I benefit from it).
+
+5. I will set priorities on what things I wnat to learn first so that those will be the things I will make first and other crucial things may be borrowed temporarily from the internet( background images for example, can be handmade by me to enhance the experience but this can be done once I know how to photoshop and sketch electrically).
+
+6. A thing of the future, but I might want to know how to increase the number of visitors on my website.
+
+7. Theme: I haven't thought of soemething as such but an observable theme must help me portray the personality of the website itself which will be inspired by my own.
+
+8. Good error handling and displaying the correct error messages in case the website doesn't load properly.
+
+9. Good color contrast for theme and fonts(basically the design part). Also I might want to include a 3D section but we'll see about that.
+
+10. I may have a chance to learn how to identify if the user is via a mobile and how to have access to its some sensor like gyro or intuitivity etc.
+
+11. I might want to know who visited my website atleast when they do so via some link that I set up on, say instagram( obvio I would like to do some mischeif).
+
+Now we will list the mandatory parts of the website
+
+A photo of mine at the first sight( could be a caricature too)
