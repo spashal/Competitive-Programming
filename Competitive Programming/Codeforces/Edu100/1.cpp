@@ -25,18 +25,27 @@ int main(){
     cin.tie(NULL);
     cin >> t;
 	while( t-- ){
-		cin >> n;
-		vector< string > inp(n);
-		for(int i  = 0 ; i < n ; i++)
-			cin >> inp[i];
-		vector< vector< ll > > ctr(3, vector< ll > (2, 0));
+		cin >> n;ari;
+		vector< ll > a1, a2;
+		ll ans1 = 0, ans2 = 0;
+		for(int i = 0 ; i < n ; i++){
+			if( i % 2 == 0 ){
+				a1.pb(1);
+				a2.pb(a[i]);
+			}
+			else{
+				a1.pb(a[i]);
+				a2.pb(1);
+			}
+				ans1 += llabs(a1[i] - a[i]);
+				ans2 += llabs(a2[i] - a[i]);
+		}
 		for(int i = 0 ; i < n ; i++)
-			for(int j = 0 ; j < n ; j++)
-				if( ctr[i][j] == 'X' )
-					ctr[(i + j) % 3][0]++;
-				else if( ctr[i][j] == 'O' )
-					ctr[(i + j) % 3][1]++;
-		if( min(ctr[1][0], min(ctr[0][0], ctr[2][0])) == ctr[0][0])
+			if( ans1 > ans2 )
+				cout << a2[i] << " ";
+			else
+				cout << a1[i] << " ";
+		cout << endl;
 	}
 	return(0);
 }

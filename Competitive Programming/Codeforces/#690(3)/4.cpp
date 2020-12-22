@@ -19,6 +19,22 @@ void printar(vector< ll > ar, ll l, ll r){
 		cout << ar[i] << " ";
 	cout << endl;
 }
+
+ll fun(int i, ll sum, ll ctr){
+	// cout << i << " ";
+	if( i >= n )
+		return (ctr - 1);
+	if( i == n - 1 and a[i] == sum )
+		return ctr;
+	ll suma = 0;
+	for(int j = i ; j < n ; j++){
+		suma += a[j];
+		if( suma == sum ){
+			return fun(j + 1, sum, ctr + 1);
+		}
+	}
+	return -1;
+}
 	
 int main(){
     ios_base::sync_with_stdio(false);
@@ -26,17 +42,19 @@ int main(){
     cin >> t;
 	while( t-- ){
 		cin >> n;
-		vector< string > inp(n);
-		for(int i  = 0 ; i < n ; i++)
-			cin >> inp[i];
-		vector< vector< ll > > ctr(3, vector< ll > (2, 0));
-		for(int i = 0 ; i < n ; i++)
-			for(int j = 0 ; j < n ; j++)
-				if( ctr[i][j] == 'X' )
-					ctr[(i + j) % 3][0]++;
-				else if( ctr[i][j] == 'O' )
-					ctr[(i + j) % 3][1]++;
-		if( min(ctr[1][0], min(ctr[0][0], ctr[2][0])) == ctr[0][0])
+		ari;
+		ll ans = 1;
+		for(int i = 0 ; i < n - 1 ; i++){
+			ll sum = 0;
+			for(int j = 0 ; j <= i ; j++){
+				sum += a[j];
+			}
+			// cout << i << " " << sum << endl;
+			if( i < n - 1)
+			ans = max(ans, fun(i + 1, sum, 2));
+			// cout << ans << " " << sum << " * " << endl;
+		}
+		cout << n - ans << endl;
 	}
 	return(0);
 }

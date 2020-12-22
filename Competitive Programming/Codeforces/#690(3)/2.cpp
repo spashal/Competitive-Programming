@@ -26,17 +26,30 @@ int main(){
     cin >> t;
 	while( t-- ){
 		cin >> n;
-		vector< string > inp(n);
-		for(int i  = 0 ; i < n ; i++)
-			cin >> inp[i];
-		vector< vector< ll > > ctr(3, vector< ll > (2, 0));
-		for(int i = 0 ; i < n ; i++)
-			for(int j = 0 ; j < n ; j++)
-				if( ctr[i][j] == 'X' )
-					ctr[(i + j) % 3][0]++;
-				else if( ctr[i][j] == 'O' )
-					ctr[(i + j) % 3][1]++;
-		if( min(ctr[1][0], min(ctr[0][0], ctr[2][0])) == ctr[0][0])
+		string s;
+		cin >> s;
+		bool flag = false;
+		if( s[0] == '2' ){
+			if( s[1] == '0' ){
+				if( s[2] == '2' ){
+					if( s[3] == '0' )
+						flag = true;
+					else if( s[n - 1] == '0' )
+						flag = true;
+				}
+				else if( s[n - 2] == '2' and s[n - 1] == '0' ){
+					flag = true;
+				}
+			}
+			else if( s[n - 3] == '0' and s[n - 2] == '2' and s[n - 1] == '0' )
+				flag = true;
+		}
+		else if( s[n - 4] == '2' and s[n - 3] == '0' and s[n - 2] == '2' and s[n - 1] == '0' )
+			flag = true;
+		if( flag )
+			cout << "Yes\n";
+		else
+			cout << "No\n";
 	}
 	return(0);
 }

@@ -24,7 +24,6 @@ bool pos[300005];
 ll presence[300005];
 	
 void fun(ll l, ll r, ll num){
-	// cout << num << " here it is " << l << " " << r << "\n";
 	ll look = n - num + 1;
 	if( presence[look] == 0 )
 		pos[num] = false;	
@@ -42,7 +41,6 @@ void fun(ll l, ll r, ll num){
 		pos[num] = true;
 	else
 		pos[num] = false;
-	// cout << num << " is and pos is " << pos[num] << endl;
 }
 
 int main(){
@@ -67,17 +65,13 @@ int main(){
 					break;
 				}
 			}
-		if( inp[0] == 1 ){
+		if( inp[0] == 1 )
 			fun(1, n - 1, n - 1);
-		}
 		else if( inp[n - 1] == 1 )
 			fun(0, n - 2, n - 1);
-		// cout << "bruh " << pos[n] << " " << n << endl;
 		for(int i = 0 ; i < n ; i++)
-			if( inp[i] == 1 ){
+			if( inp[i] == 1 )
 				pos[n] = true;
-				// cout << "hey, " << inp[i] << " " << i << endl;
-			}
 		sort(inp.begin(), inp.end());
 		pos[1] = true;
 		for(int i = 0 ; i < n ; i++)
