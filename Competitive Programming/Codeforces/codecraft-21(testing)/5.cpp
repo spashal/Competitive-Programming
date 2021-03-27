@@ -2,7 +2,7 @@
 using namespace std;
 typedef long long ll;
 typedef long double ld;
-ll n, m, t, k, a[100005];
+ll n, m, t, a[100005];
 vector< ll > adj[100005];
 #define ari for( int i = 0 ; i < n ; i++ ) cin >> a[i];
 #define ginp for( int i = 0 ; i < m ; i++ ){ int u, v; cin >> u >> v; adj[u].push_back(v); adj[v].push_back(u);}
@@ -20,30 +20,34 @@ void printar(vector< ll > ar, ll l, ll r){
 	cout << endl;
 }
 
-ll fun(ll index, ll sum1, ll sum2, bool dota){
-	if( sum1 >= k and sum2 >= k )
-		return index;
-	if( index == n )
-		return -1;
-	ll ctr = 1000000;
-	if( llabs(sum1 - sum2) < a[index] and max(sum1, sum2) < k and !dota )
-		ctr = min(ctr, fun(index + 1, max(sum1, sum2) + a[index], min(sum1, sum2), true));
-	if( sum1 < sum2 )
-		ctr = min(ctr, fun(index + 1, sum1 + a[index], sum2, dota));
-	else
-		ctr = min(ctr, fun(index + 1, sum1, sum2 + a[index], dota));
-	return ctr;
+ll gcd(ll a, ll b)
+{
+    if (b == 0)
+        return a;
+    return gcd(b, a % b);
+     
 }
-	
+
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cin >> t;
 	while( t-- ){
-		cin >> n >> k;
-		ari;
-		sort(a, a + n, greater< ll > ());
-		cout << fun(1, a[0], 0, f) << endl;
+		cin >> n;
+		ll sum = 0, temp = n - 1;
+		while(1){
+			sum = 0;
+			temp++;
+			ll temp1 = temp;
+			while(temp1){
+					sum += temp1 % 10;
+					temp1 /= 10;
+				}
+			if(gcd(temp, sum) > 1){
+				cout << temp << endl;
+				break;
+			}
+		}
 	}
 	return(0);
 }
