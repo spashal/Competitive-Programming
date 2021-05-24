@@ -23,14 +23,9 @@ void printar(vector< ll > ar, ll l, ll r){
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-	cin >> n >> m;
-	vector< vector < ll > > ban(n, vector < ll > (m, -1));
-	for(int i = 0 ; i < n ; i++){
-		ll x, y;
-		cin >> t >> x >> y;
-		if(t == 1){
-			
-		}
+    cin >> t;
+	while( t-- ){
+		cin >> n;
 	}
 	return(0);
 }

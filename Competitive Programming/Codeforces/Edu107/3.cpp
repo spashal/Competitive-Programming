@@ -23,14 +23,23 @@ void printar(vector< ll > ar, ll l, ll r){
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-	cin >> n >> m;
-	vector< vector < ll > > ban(n, vector < ll > (m, -1));
-	for(int i = 0 ; i < n ; i++){
-		ll x, y;
-		cin >> t >> x >> y;
-		if(t == 1){
-			
+    t = 1;
+	while( t-- ){
+		cin >> n >> m;
+		vector< ll > index(51, 10000000);
+		for(ll i = 0 ; i < n ; i++){
+			cin >> a[0];	
+			index[a[0]] = min(index[a[0]], i + 1);
 		}
+		for(int i = 0 ; i < m ; i++){
+			cin >> a[0];
+			cout << index[a[0]] << " ";
+			for(int j = 1 ; j <= 50 ; j++)
+				if(j != a[0] and index[j] < index[a[0]])
+					index[j] += 1;
+			index[a[0]] = 1;
+		}
+		cout << endl;
 	}
 	return(0);
 }

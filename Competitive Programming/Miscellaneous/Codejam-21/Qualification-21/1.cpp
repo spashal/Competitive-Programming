@@ -23,14 +23,26 @@ void printar(vector< ll > ar, ll l, ll r){
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-	cin >> n >> m;
-	vector< vector < ll > > ban(n, vector < ll > (m, -1));
-	for(int i = 0 ; i < n ; i++){
-		ll x, y;
-		cin >> t >> x >> y;
-		if(t == 1){
-			
+    cin >> t;
+	for(int i = 1 ; i <= t ; i++){
+		cin >> n;
+		ari;
+		ll cost = 0;
+		for(int j = 0 ; j < n - 1 ; j++){
+			ll mini = j;
+			for(int k = j ; k < n ; k++)
+				if(a[mini] > a[k]){
+					mini = k;
+				}
+			cost += mini - j + 1;
+			// cout << cost << " haha \n";
+			for(int k = j ; k <= j + (mini - j) / 2 ; k++){
+				ll temp = a[k];
+				a[k] = a[mini + j - k];
+				a[mini + j - k] = temp;
+			}
 		}
+		cout << "Case " << i << "#: " << cost << endl;
 	}
 	return(0);
 }

@@ -23,14 +23,14 @@ void printar(vector< ll > ar, ll l, ll r){
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-	cin >> n >> m;
-	vector< vector < ll > > ban(n, vector < ll > (m, -1));
-	for(int i = 0 ; i < n ; i++){
-		ll x, y;
-		cin >> t >> x >> y;
-		if(t == 1){
-			
-		}
+    cin >> t;
+	while( t-- ){
+		cin >> n;
+		m = 1;
+		for(int i = 2 ; i <= 100 ; i++)
+			if(n % i == 0 and (100 - n) % i == 0)
+				m = i;
+		cout << n/m + (100-n)/m << endl;
 	}
 	return(0);
 }

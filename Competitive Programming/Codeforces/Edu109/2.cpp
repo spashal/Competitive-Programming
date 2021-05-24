@@ -23,14 +23,24 @@ void printar(vector< ll > ar, ll l, ll r){
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-	cin >> n >> m;
-	vector< vector < ll > > ban(n, vector < ll > (m, -1));
-	for(int i = 0 ; i < n ; i++){
-		ll x, y;
-		cin >> t >> x >> y;
-		if(t == 1){
-			
+    cin >> t;
+	while( t-- ){
+		cin >> n;
+		vector< int > inp1(n, 0), inp2;
+		for(int i = 0 ; i < n ; i++){
+			int aa;
+			cin >> inp1[i];
 		}
+		inp2 = inp1;
+		sort(inp2.begin(), inp2.end());
+		if(inp2 == inp1)
+			cout << "0" << endl;
+		else if(inp1[0] == inp2[0] or inp1[n-1] == inp2[n-1])
+			cout << "1" << endl;
+		else if(inp1[0] == inp2[n-1] and inp1[n-1] == inp2[0])
+			cout << "3" << endl;
+		else
+			cout << "2" << endl;
 	}
 	return(0);
 }
